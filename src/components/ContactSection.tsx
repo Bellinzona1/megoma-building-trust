@@ -5,7 +5,7 @@ import { Phone, Mail, Globe } from "lucide-react";
 const EASE = [0.22, 1, 0.36, 1] as const;
 
 const infoItems = [
-  { icon: Phone, content: "+99 (95) 995035", href: null },
+  { icon: Phone, content: "", href: null },
   { icon: Mail, content: "comercial@megoma.com.mx", href: "mailto:comercial@megoma.com.mx" },
   { icon: Globe, content: "www.megoma.com.mx", href: "https://www.megoma.com.mx" },
 ];
@@ -38,7 +38,7 @@ const ContactSection = () => {
     const text = encodeURIComponent(
       `Hola MEGOMA, me contacto desde su sitio web.\n\n*Nombre:* ${form.nombre}\n*Email:* ${form.email}\n\n*Mensaje:*\n${form.mensaje}`
     );
-    window.open(`https://wa.me/5299995035?text=${text}`, "_blank");
+    window.open(`https://wa.me/?text=${text}`, "_blank");
   };
 
   return (

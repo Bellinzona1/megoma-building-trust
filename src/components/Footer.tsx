@@ -19,10 +19,6 @@ const Footer = () => (
 
         <div className="space-y-3">
           <div className="flex items-center gap-3 text-secondary-foreground/70 text-sm">
-            <Phone size={16} className="text-primary shrink-0" />
-            <span>+99 995035</span>
-          </div>
-          <div className="flex items-center gap-3 text-secondary-foreground/70 text-sm">
             <Mail size={16} className="text-primary shrink-0" />
             <span>comercial@megoma.com.mx</span>
           </div>
