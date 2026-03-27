@@ -1,12 +1,11 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
-import { Mail, Globe } from "lucide-react";
+import { Mail } from "lucide-react";
 
 const EASE = [0.22, 1, 0.36, 1] as const;
 
 const infoItems = [
   { icon: Mail, content: "comercial@megoma.com.mx", href: "mailto:comercial@megoma.com.mx" },
-  { icon: Globe, content: "www.megoma.com.mx", href: "https://www.megoma.com.mx" },
 ];
 
 const infoContainer = {
