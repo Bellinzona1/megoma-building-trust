@@ -1,13 +1,13 @@
 import { motion } from "framer-motion";
 import { useRef } from "react";
-import c1 from "@/assets/Clientes.logo/cliente1.png";
-import c2 from "@/assets/Clientes.logo/cliente2.png";
-import c3 from "@/assets/Clientes.logo/cliente3.png";
-import c4 from "@/assets/Clientes.logo/cliente4.png";
-import c5 from "@/assets/Clientes.logo/cliente5.png";
-import c6 from "@/assets/Clientes.logo/cliente6.png";
-import c7 from "@/assets/Clientes.logo/cliente7.png";
-import c8 from "@/assets/Clientes.logo/cliente8.png";
+import c1 from "@/assets/Clientes.logo/Cliente1.png";
+import c2 from "@/assets/Clientes.logo/Cliente2.png";
+import c3 from "@/assets/Clientes.logo/Cliente3.png";
+import c4 from "@/assets/Clientes.logo/Cliente4.png";
+import c5 from "@/assets/Clientes.logo/Cliente5.png";
+import c6 from "@/assets/Clientes.logo/Cliente6.png";
+import c7 from "@/assets/Clientes.logo/Cliente7.png";
+import c8 from "@/assets/Clientes.logo/Cliente8.png";
 
 const clients = [
   { img: c1, name: "Kärcher" },
