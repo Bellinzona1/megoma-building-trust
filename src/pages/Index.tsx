@@ -7,7 +7,6 @@ import ProjectsSection from "@/components/ProjectsSection";
 import ClientsSection from "@/components/ClientsSection";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
-import WhatsAppButton from "@/components/WhatsAppButton";
 
 const Index = () => (
   <>
@@ -20,7 +19,6 @@ const Index = () => (
     <ClientsSection />
     <ContactSection />
     <Footer />
-    <WhatsAppButton />
   </>
 );
 

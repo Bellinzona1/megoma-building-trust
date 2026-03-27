@@ -1,11 +1,10 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
-import { Phone, Mail, Globe } from "lucide-react";
+import { Mail, Globe } from "lucide-react";
 
 const EASE = [0.22, 1, 0.36, 1] as const;
 
 const infoItems = [
-  { icon: Phone, content: "", href: null },
   { icon: Mail, content: "comercial@megoma.com.mx", href: "mailto:comercial@megoma.com.mx" },
   { icon: Globe, content: "www.megoma.com.mx", href: "https://www.megoma.com.mx" },
 ];
@@ -35,10 +34,11 @@ const ContactSection = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    const text = encodeURIComponent(
-      `Hola MEGOMA, me contacto desde su sitio web.\n\n*Nombre:* ${form.nombre}\n*Email:* ${form.email}\n\n*Mensaje:*\n${form.mensaje}`
+    const subject = encodeURIComponent("Contacto desde sitio web");
+    const body = encodeURIComponent(
+      `Nombre: ${form.nombre}\nEmail: ${form.email}\n\nMensaje:\n${form.mensaje}`
     );
-    window.open(`https://wa.me/?text=${text}`, "_blank");
+    window.location.href = `mailto:comercial@megoma.com.mx?subject=${subject}&body=${body}`;
   };
 
   return (
