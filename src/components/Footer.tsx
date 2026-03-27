@@ -29,7 +29,7 @@ const Footer = () => (
         </div>
 
         <div className="text-secondary-foreground/50 text-sm md:text-right">
-          <p>© {new Date().getFullYear()} MEGOMA</p>
+          <p>© 2014 MEGOMA</p>
           <p className="mt-1">Todos los derechos reservados.</p>
         </div>
       </div>
