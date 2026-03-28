@@ -1,5 +1,5 @@
 import logoMegoma from "@/assets/Logo.png";
-import { Phone, Mail } from "lucide-react";
+import { Phone } from "lucide-react";
 
 const Footer = () => (
   <footer className="bg-secondary py-12">
@@ -14,13 +14,6 @@ const Footer = () => (
             <p className="text-secondary-foreground/60 text-xs mt-1">
               Construcción y mantenimiento profesional
             </p>
-          </div>
-        </div>
-
-        <div className="space-y-3">
-          <div className="flex items-center gap-3 text-secondary-foreground/70 text-sm">
-            <Mail size={16} className="text-primary shrink-0" />
-            <span>comercial@megoma.com.mx</span>
           </div>
         </div>
 

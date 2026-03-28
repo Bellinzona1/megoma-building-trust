@@ -8,6 +8,7 @@ import c5 from "@/assets/Clientes.logo/Cliente5.png";
 import c6 from "@/assets/Clientes.logo/Cliente6.png";
 import c7 from "@/assets/Clientes.logo/Cliente7.png";
 import c8 from "@/assets/Clientes.logo/Cliente8.png";
+import c9 from "@/assets/Clientes.logo/Cliente9.png";
 
 const clients = [
   { img: c1, name: "Kärcher" },
@@ -18,6 +19,7 @@ const clients = [
   { img: c6, name: "Equilibrio Farmacéutico" },
   { img: c7, name: "Cliente 7" },
   { img: c8, name: "Isla Victoria" },
+  { img: c9, name: "Cliente 9" },
 ];
 
 const container = {

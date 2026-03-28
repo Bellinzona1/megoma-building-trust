@@ -1,22 +1,7 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
-import { Mail } from "lucide-react";
 
 const EASE = [0.22, 1, 0.36, 1] as const;
-
-const infoItems = [
-  { icon: Mail, content: "comercial@megoma.com.mx", href: "mailto:comercial@megoma.com.mx" },
-];
-
-const infoContainer = {
-  hidden: {},
-  show: { transition: { staggerChildren: 0.1, delayChildren: 0.3 } },
-};
-
-const infoItem = {
-  hidden: { opacity: 0, x: -24 },
-  show: { opacity: 1, x: 0, transition: { duration: 0.55, ease: EASE } },
-};
 
 const formContainer = {
   hidden: {},
@@ -29,15 +14,10 @@ const formItem = {
 };
 
 const ContactSection = () => {
-  const [form, setForm] = useState({ nombre: "", email: "", mensaje: "" });
+  const [form, setForm] = useState({ nombre: "", mensaje: "" });
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    const subject = encodeURIComponent("Contacto desde sitio web");
-    const body = encodeURIComponent(
-      `Nombre: ${form.nombre}\nEmail: ${form.email}\n\nMensaje:\n${form.mensaje}`
-    );
-    window.location.href = `mailto:comercial@megoma.com.mx?subject=${subject}&body=${body}`;
   };
 
   return (
@@ -63,35 +43,7 @@ const ContactSection = () => {
           />
         </motion.div>
 
-        <div className="grid md:grid-cols-2 gap-12 max-w-5xl mx-auto">
-          {/* Info column */}
-          <motion.div
-            variants={infoContainer}
-            initial="hidden"
-            whileInView="show"
-            viewport={{ once: true, amount: 0.2 }}
-            className="space-y-6"
-          >
-            {infoItems.map(({ icon: Icon, content, href }) => (
-              <motion.div key={content} variants={infoItem} className="flex items-start gap-4">
-                <Icon className="text-primary mt-1 shrink-0" size={22} />
-                {href ? (
-                  <a
-                    href={href}
-                    target={href.startsWith("http") ? "_blank" : undefined}
-                    rel={href.startsWith("http") ? "noreferrer" : undefined}
-                    className="text-primary hover:underline font-body"
-                  >
-                    {content}
-                  </a>
-                ) : (
-                  <p className="text-muted-foreground font-body">{content}</p>
-                )}
-              </motion.div>
-            ))}
-          </motion.div>
-
-          {/* Form column */}
+        <div className="max-w-2xl mx-auto">
           <motion.form
             onSubmit={handleSubmit}
             variants={formContainer}
@@ -107,16 +59,6 @@ const ContactSection = () => {
                 placeholder="Nombre"
                 value={form.nombre}
                 onChange={(e) => setForm({ ...form, nombre: e.target.value })}
-                className="w-full rounded-lg border border-border bg-card px-4 py-3 text-card-foreground placeholder:text-muted-foreground/60 focus:outline-none focus:ring-2 focus:ring-primary/50 font-body"
-              />
-            </motion.div>
-            <motion.div variants={formItem}>
-              <input
-                type="email"
-                required
-                placeholder="Email"
-                value={form.email}
-                onChange={(e) => setForm({ ...form, email: e.target.value })}
                 className="w-full rounded-lg border border-border bg-card px-4 py-3 text-card-foreground placeholder:text-muted-foreground/60 focus:outline-none focus:ring-2 focus:ring-primary/50 font-body"
               />
             </motion.div>
